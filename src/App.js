@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import { useContext } from 'react';
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
+import { AuthContext } from './Components/Context/AuthProvider/AuthProvider';
+import { router } from './Components/Routes/Routes';
 
 function App() {
+  const {darkMode}=useContext(AuthContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div data-theme={darkMode===true?"dark":"light"} >
+      <div className="min-h-screen">
+
+      <RouterProvider router={router} />
+      </div>
     </div>
   );
 }
