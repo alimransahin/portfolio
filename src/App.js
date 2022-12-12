@@ -7,7 +7,7 @@ import { router } from './Components/Routes/Routes';
 function App() {
   const {darkMode}=useContext(AuthContext);
   return (
-    <div data-theme={darkMode===true?"dark":"light"} >
+    <div data-theme={darkMode === true ?"night":"light"} >
       <div className="min-h-screen">
 
       <RouterProvider router={router} />
