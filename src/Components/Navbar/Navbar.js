@@ -33,6 +33,7 @@ const Navbar = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52">
                         <li><Link to='/'>Home</Link></li>
+                        <li><Link to='/blog'>Blog</Link></li>
                         <li><HashLink smooth to='/#contact'>Contact Us</HashLink></li>
                     </ul>
                 </div>
